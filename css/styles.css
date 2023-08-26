@@ -1,0 +1,55 @@
+a:link { color: #0053b8; }
+a:visited { color:#0002fb; }
+a:hover, a:focus { color:#000; }
+a:active { color:#000e02; }
+    
+body {
+  max-width: 45rem !important;
+  margin: 0 auto;
+  padding: 0.25em;
+  font-family: serif;
+  font-size: 16pt;
+}
+
+li {
+  margin-bottom: 0.5em !important;
+}
+
+h2, h3, h4 {
+  padding-top: 0.5em;
+}
+
+footer {
+  padding-bottom: 2rem;
+}
+
+@media print {
+  * {
+    color:#000 !important;
+    box-shadow:none !important;
+    text-shadow:none !important;
+    background:transparent !important;
+  }
+  
+  html { background-color:#fff; }
+  nav { display:none; }
+
+  /* Show link destinations in brackets after the link text */
+  a[href]:after { content: " (" attr(href) ") "; }
+  
+  a[href] {
+    font-weight:bold;
+    text-decoration:underline;
+    color:#06c;
+    border:none;
+  }
+  
+  abbr[title]:after { content: " (" attr(title) ")"; }
+
+  figure { 
+    margin-bottom:1em; 
+    overflow:hidden;
+  }
+
+  figure img { border:1px solid #000; }
+}
